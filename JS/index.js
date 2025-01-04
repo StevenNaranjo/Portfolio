@@ -151,7 +151,7 @@ const translations = {
                 description : "I enjoy video games in my free time. My favorite at the moment is Hollow Knight."
             },
             motorbikes: {
-                name: "Motos",
+                name: "Motorbikes",
                 description: "I like motorcycles, whether they are enduro, cross, or super sports."
             },
             nature: {
