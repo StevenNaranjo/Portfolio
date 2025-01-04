@@ -13,7 +13,10 @@
         crossorigin="anonymous"></script>
     <!-- css propio -->
     <link rel="stylesheet" href="./styles/style.css">
-
+    <style>
+        
+        
+    </style>
 </head>
 
 <body>
@@ -36,16 +39,16 @@
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a href="#inicio" class="nav-link link-secondary"
-                                    data-translate="navbar.home">Inicio</a>
+                                    data-translate="navbar.home"></a>
                             </li>
                             <li class="nav-item">
-                                <a href="#proyectos" class="nav-link" data-translate="navbar.projects">Proyectos</a>
+                                <a href="#proyectos" class="nav-link" data-translate="navbar.projects"></a>
                             </li>
                             <li class="nav-item">
-                                <a href="#formacion" class="nav-link" data-translate="navbar.education">Formación</a>
+                                <a href="#formacion" class="nav-link" data-translate="navbar.education"></a>
                             </li>
                             <li class="nav-item">
-                                <a href="#contacto" class="nav-link" data-translate="navbar.contact">Contacto</a>
+                                <a href="#contacto" class="nav-link" data-translate="navbar.contact"></a>
                             </li>
                         </ul>
 
@@ -91,7 +94,8 @@
             <div class="row align-items-center">
                 <div class="col-md-4 text-center d-flex flex-column justify-content-center">
                     <h2 data-translate="about.greeting"></h2>
-                    <h1>Alex Naranjo</h1>
+                    <!-- 3. Efecto de resaltado suave -->
+                    <h1 class="highlight-sweep">Alex Naranjo</h1>
                     <p><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-terminal css-svt5ra">
@@ -109,8 +113,10 @@
                         </svg>
                         Cartago, Cartago, Costa Rica
                     </p>
-                    <a href="#contacto" class="btn btn-outline-success rounded px-3"
-                        data-translate="navbar.disponibility">Disponible para trabajar</a>
+                    <a href="#contacto" class="btn btn-success fw-bold rounded-pill px-4 py-2">
+                        <span data-translate="navbar.disponibility">Disponible para trabajar</span>
+                    </a>
+
                 </div>
                 <div class="col-md-4 mt-5 text-center">
                     <img src="./imgs/me.jpg" alt="Alex Naranjo" class="img-fluid rounded-circle">
@@ -237,7 +243,7 @@
 
 
 
-        
+
         <!-- Proyectos Relevantes -->
         <div class="container" id="proyectos">
             <h2 class="mb-5" data-translate="projects.relevantProjects"></h2>
@@ -510,7 +516,8 @@
                                 <h5 class="card-subtitle text-muted" data-translate="education.tec.dataBases"></h5>
                                 <p class="card-text" data-translate="education.tec.description">
                                 </p>
-                                <a href="https://www.tec.ac.cr" class="btn btn-sm btn-outline-secondary" target="_blank">
+                                <a href="https://www.tec.ac.cr" class="btn btn-sm btn-outline-secondary"
+                                    target="_blank">
                                     <svg stroke="currentColor" fill="currentColor" stroke-width="0"
                                         viewBox="0 0 496 512" aria-hidden="true" focusable="false" height="1em"
                                         width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -594,7 +601,7 @@
                         <h3 class="card-title">
                             ♟️<span data-translate="personalInterests.chess.name"></span>
                         </h3>
-                        <p class="card-text" data-translate="personalInterests.chess.description">  </p>
+                        <p class="card-text" data-translate="personalInterests.chess.description"> </p>
                     </div>
                 </div>
             </div>
@@ -604,7 +611,8 @@
     <!-- Contacto -->
 
     <div class="container seccion pb-5 text-center" id="contacto">
-        <h2 class="text-center mb-4">📲 <span data-translate="getInTouch.title"></span></h2>
+        <h2 class="bouncing-text">📲 <span data-translate="getInTouch.title">Contáctanos</span></h2>
+
         <p data-translate="getInTouch.description"></p>
         <div class="row justify-content-center mt-4">
             <div class="col-md-8">

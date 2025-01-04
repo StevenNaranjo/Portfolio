@@ -184,6 +184,9 @@ function changeLanguage(language) {
         });
         el.textContent = translation;
     });
+
+    // Emitir el evento 'languageChanged' para que la animación se aplique de nuevo
+    document.dispatchEvent(new Event('languageChanged'));
 }
 
 document.getElementById('changeLanguageBtn').addEventListener('click', () => {
@@ -195,6 +198,26 @@ document.getElementById('changeLanguageBtn').addEventListener('click', () => {
     button.textContent = currentLanguage === 'es' ? 'ES' : 'ENG';
 });
 
-
 // Inicializar con el idioma por defecto
 changeLanguage(currentLanguage);
+
+// Función para dividir el texto y aplicar animaciones a las letras, incluyendo los espacios
+function applyBouncingText() {
+    const text = document.querySelector('[data-translate="getInTouch.title"]');
+    const content = text.textContent;
+    
+    // Dividir el contenido en caracteres, pero mantener los espacios intactos
+    text.innerHTML = content.split('').map((char, i) => {
+        // Si el caracter es un espacio, asignar el mismo estilo
+        if (char === ' ') {
+            return `<span style="--i:${i}">&nbsp;</span>`;  // Usamos `&nbsp;` para el espacio
+        }
+        return `<span style="--i:${i}">${char}</span>`;
+    }).join('');
+}
+
+// Aplicar animación de rebote al cargar la página
+document.addEventListener('DOMContentLoaded', applyBouncingText);
+
+// Si el contenido cambia (por ejemplo, al cambiar el idioma), volver a aplicar el efecto
+document.addEventListener('languageChanged', applyBouncingText);
