@@ -1,0 +1,25 @@
+.seccion {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 1px solid #ddd;
+    padding-top: 3%;
+    border-radius: 8px;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.oscuro {
+    background-color: rgb(33 37 41);
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section,
+[id] {
+    scroll-margin-top: 100px;
+    /* Ajusta el valor según lo necesario */
+}
